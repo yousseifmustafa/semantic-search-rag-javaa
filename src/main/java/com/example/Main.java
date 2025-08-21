@@ -9,6 +9,7 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import io.github.cdimascio.dotenv.Dotenv;
 
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.chat.ChatLanguageModel;
@@ -44,9 +45,10 @@ public class Main {
                     .modelName("nomic-embed-text")
                     .build();
 
+            Dotenv dotenv = Dotenv.load();
 
-            String milvusUri = "https://in03-29eca0c584bdfb8.serverless.aws-eu-central-1.cloud.zilliz.com";
-            String milvusToken ="f5feb53b793c9984804c412ad36cb8eeb15d3f3cac15e2ca507085f3d034ed98cb720ef0b07f4a7fb699395a083d7f8ba26f3159";
+            String milvusUri = dotenv.get("MILVUS_URI");
+            String milvusToken = dotenv.get("MILVUS_TOKEN");
 
             MilvusEmbeddingStore vectorDB = MilvusEmbeddingStore.builder()
                     .uri(milvusUri)

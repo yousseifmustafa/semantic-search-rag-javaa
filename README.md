@@ -17,7 +17,6 @@ combining **Semantic Search** with **LLMs** to answer questions using a knowledg
 3. Perform semantic search  
 4. Generate answers with context retrieved from the vector DB  
 
----
 
 ## 🧩 Architecture
 

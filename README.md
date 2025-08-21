@@ -4,7 +4,6 @@
 A **Retrieval Augmented Generation (RAG)** system implemented in **Java**,  
 combining **Semantic Search** with **LLMs** to answer questions using a knowledge base stored in **Milvus (Zilliz Cloud)**.
 
----
 
 ## ⚡ Overview
 * - **Language**: Java 17+

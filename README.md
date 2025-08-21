@@ -21,14 +21,18 @@ combining **Semantic Search** with **LLMs** to answer questions using a knowledg
 
 ## 🧩 Architecture
 
+The pipeline works as follows:
+
 ```mermaid
 flowchart TD
-    A[Knowledge Base: knowledge.txt] -->|Chunk + Embed| B[(Milvus Vector DB)]
-    Q[Questions: questions.txt] -->|Search Embeddings| B
+    A[Knowledge Base (knowledge.txt)] -->|Chunk + Embed| B[(Milvus Vector DB)]
+    Q[Questions (questions.txt)] -->|Search Embeddings| B
     B -->|Top-K Context| LLM[Ollama LLM (llama3)]
     LLM -->|Generated Answer| OUT[answers.txt + report.csv]
 
-````
+
+
+
 
 ---
 

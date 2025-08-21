@@ -1,119 +1,143 @@
+😂 حاضر يا باشا، خلينا ندي المشروع **README 🔥 يخلي أي حد يدخل الريبو ينبهر بيه**.
+هنخليها **شاملة + منظمة + فيها رسومات + فيها طريقة التشغيل خطوة بخطوة + صور/دياغرام**.
 
+---
+
+## 🚀 README.md النسخة الجامدة
 
 ````markdown
-# 🤖 LangChain4j + Zilliz Cloud + Ollama RAG
+# 🔍 Semantic Search RAG in Java
 
-A **Java Retrieval-Augmented Generation (RAG)** pipeline using **LangChain4j**, **Ollama**, and **Zilliz Cloud (Milvus)**.  
-It ingests your knowledge, stores embeddings in Zilliz Cloud, and answers natural language questions with context-aware responses.
-
----
-
-## ✅ Requirements
-- Java 17+
-- Maven
-- [Ollama](https://ollama.com) with models:
-  - `llama3:8b`
-  - `nomic-embed-text`
-- [Zilliz Cloud](https://cloud.zilliz.com) account (URI + API Key)
+نظام **RAG (Retrieval Augmented Generation)** مكتوب بـ **Java**،  
+بيجمع بين **Semantic Search** و **LLMs** عشان يجاوب على الأسئلة باستخدام قاعدة معرفة محلية أو على Milvus (Zilliz Cloud).
 
 ---
 
-## ⚙️ Setup
+## ⚡ نظرة سريعة
+- **اللغة**: Java 17+
+- **الـ Framework**: [LangChain4j](https://github.com/langchain4j/langchain4j)
+- **الـ Vector DB**: [Milvus / Zilliz](https://zilliz.com/)
+- **LLM Provider**: [Ollama](https://ollama.ai/) (تشغيل نماذج زي `llama3` محليًا)
+- **الوظيفة الأساسية**:  
+  1. يقسم النصوص (chunking)  
+  2. يخزنها كـ embeddings في Milvus  
+  3. يعمل Semantic Search  
+  4. يولد إجابة من الـ LLM بناءً على النصوص المسترجعة  
 
-1. **Configure Zilliz**  
-   - Get your `URI` and `API Key` from Zilliz Cloud  
-   - Update `Main.java`:
-     ```java
-     String milvusUri = "YOUR_ZILLIZ_URI";
-     String milvusToken = "YOUR_ZILLIZ_API_KEY";
-     ```
+---
 
-2. **Prepare Knowledge**  
-   - Add your text knowledge base to `knowledge.txt`  
-   - Add your test questions to `questions.txt`
+## 🧩 المعمارية (Architecture)
 
-3. **Run Ollama locally**  
-   ```bash
-   ollama pull llama3:8b
-   ollama pull nomic-embed-text
-   ollama run llama3:8b
-   ollama run nomic-embed-text
+```mermaid
+flowchart TD
+    A[Knowledge Base: knowledge.txt] -->|Chunk + Embedding| B[Milvus Vector DB]
+    Q[Question: questions.txt] -->|Embedding + Search| B
+    B -->|Top-K Context| LLM[Ollama LLM (llama3)]
+    LLM -->|Generated Answer| OUT[answers.txt + report.csv]
 ````
 
-4. **Build & Run the Project**
+---
 
-   ```bash
-   mvn clean package
-   mvn exec:java -Dexec.mainClass="com.example.Main"
-   ```
+## ✨ Features
+
+* ✅ **Chunking ذكي** للنصوص لتسهيل البحث الدلالي.
+* ✅ **Semantic Search** باستخدام Milvus (Cloud أو Local).
+* ✅ **LLM Integration** مع Ollama لتوليد إجابات طبيعية.
+* ✅ **تقارير جاهزة**:
+
+  * الإجابات → `answers.txt`
+  * الإحصائيات (سرعة البحث + التوليد) → `report.csv`
 
 ---
 
-## 📁 Project Structure
+## 📦 Installation
+
+### 1️⃣ Clone المشروع
+
+```bash
+git clone https://github.com/yousseifmustafa/semantic-search-rag-java.git
+cd semantic-search-rag-java
+```
+
+### 2️⃣ إعداد البيئة
+
+* نزّل [Ollama](https://ollama.ai/) وشغّل نموذج:
+
+  ```bash
+  ollama run llama3:8b
+  ```
+
+* اعمل حساب على [Zilliz Cloud](https://zilliz.com/) وخد:
+
+  * **URI**
+  * **TOKEN**
+
+* اعمل ملف `.env` في جذر المشروع:
+
+  ```env
+  MILVUS_URI=your-milvus-uri
+  MILVUS_TOKEN=your-milvus-token
+  ```
+
+⚠️ الملف `.env` متضاف في `.gitignore` علشان ميترفعش.
+
+---
+
+## 🚀 Run
+
+### Build & Run
+
+```bash
+mvn clean install
+mvn exec:java -Dexec.mainClass="com.example.Main"
+```
+
+### ملفات الإدخال/الإخراج
+
+* ✍️ `knowledge.txt` → النصوص اللي عايز تضيفها كمعرفة.
+* ❓ `questions.txt` → الأسئلة اللي النظام هيجاوب عليها.
+* 📄 `answers.txt` → الإجابات الناتجة.
+* 📊 `report.csv` → تقرير تفصيلي عن كل إجابة.
+
+---
+
+## 📂 Project Structure
 
 ```
-RAG-TASK/
-├── src/
-│   └── main/java/com/example/Main.java   # Main RAG pipeline
-├── pom.xml
-├── knowledge.txt                         # Knowledge base input
-├── questions.txt                         # Questions input
-├── answers.txt                           # Generated answers (output)
-├── report.csv                            # Evaluation metrics
-└── README.md
+semantic-search-rag-java/
+│── src/main/java/com/example/Main.java    # الكود الرئيسي
+│── knowledge.txt                          # قاعدة المعرفة
+│── questions.txt                          # الأسئلة
+│── answers.txt                            # الإجابات (ناتج التشغيل)
+│── report.csv                             # تقرير الأداء
+│── .env                                   # بيانات سرية (متجاهل من Git)
+│── pom.xml                                # إعدادات Maven
 ```
 
 ---
 
-## 📌 Example
+## 🌟 Roadmap
 
-**Input (`questions.txt`):**
-
-```
-What is the difference between Artificial Intelligence and Machine Learning?
-```
-
-**Output (`answers.txt`):**
-
-```
-Question:
-What is the difference between Artificial Intelligence and Machine Learning?
-
-Answer:
-Artificial Intelligence (AI) refers to the broader field of computer science that develops methods and systems to perceive environments, reason, and act intelligently. 
-Machine Learning (ML) is a subfield of AI focused on algorithms that allow computers to learn from data without explicit programming.
-
-Stats: retrieval=48 ms, generation=301 ms, total=349 ms, ctx_chars=872, top_k=3
------------------------------------------------------
-```
-
-**Evaluation Log (`report.csv`):**
-
-```csv
-timestamp,question,answer_length,top_k,ctx_chars,retrieval_ms,generation_ms,total_ms,manual_relevance
-2025-08-22 16:05:33,"What is the difference between Artificial Intelligence and Machine Learning?",312,3,872,48,301,349,
-```
+* [ ] دعم مصادر معرفة متعددة (PDF, Docs, DB)
+* [ ] واجهة ويب بسيطة للـ Q\&A
+* [ ] دعم أكثر من LLM (OpenAI, Anthropic)
+* [ ] تحسين الـ Chunking والـ Embedding
 
 ---
 
-## 📄 Features
+## 🤝 المساهمة
 
-* ✅ End-to-end **RAG pipeline** in Java
-* ✅ Chunked ingestion of knowledge text
-* ✅ Embeddings stored in **Zilliz Cloud (Milvus)**
-* ✅ Context-aware answering via **Ollama (llama3:8b)**
-* ✅ Performance metrics (retrieval, generation, total latency)
-* ✅ Manual evaluation support with `report.csv`
+لو حابب تطور المشروع:
 
----
-
-## 👨‍💻 Developer
-
-Developed by **Youssef** — Educational demo of building a full **RAG pipeline** with **Java**, **LangChain4j**, **Zilliz Cloud**, and **Ollama**.
+1. اعمل Fork
+2. اعمل فرع جديد `feature/my-feature`
+3. ابعت Pull Request
 
 ---
 
-## 🧠 Keywords
+## 📜 License
 
-`LangChain4j` · `Java` · `RAG` · `Zilliz Cloud` · `Ollama` · `Milvus` · `Local LLMs`
+MIT License © 2025 — Created with ❤️ by [yousseifmustafa](https://github.com/yousseifmustafa)
+
+```
 

@@ -1,3 +1,4 @@
+````markdown
 # 🔍 Semantic Search RAG in Java
 
 A **Retrieval Augmented Generation (RAG)** system implemented in **Java**,  
@@ -17,6 +18,7 @@ combining **Semantic Search** with **LLMs** to answer questions using a knowledg
 3. Perform semantic search  
 4. Generate answers with context retrieved from the vector DB  
 
+---
 
 ## 🧩 Architecture
 
@@ -26,6 +28,8 @@ flowchart TD
     Q[❓ Questions: questions.txt] -->|🔍 Search Embeddings| B
     B -->|📑 Top-K Context| LLM[🤖 Ollama LLM (llama3)]
     LLM -->|📝 Generated Answer| OUT[answers.txt + report.csv]
+````
+
 ---
 
 ## ✨ Features
@@ -129,4 +133,3 @@ Contributions are welcome!
 
 MIT License © 2025 — Created with ❤️ by [yousseifmustafa](https://github.com/yousseifmustafa)
 
-```

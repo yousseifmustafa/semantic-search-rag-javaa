@@ -1,10 +1,11 @@
 ````markdown
+---
 # 🔍 Semantic Search RAG in Java
 
 A **Retrieval Augmented Generation (RAG)** system implemented in **Java**,  
 combining **Semantic Search** with **LLMs** to answer questions using a knowledge base stored in **Milvus (Zilliz Cloud)**.
-
-
+---
+---
 ## ⚡ Overview
 * - **Language**: Java 17+
 * - **Framework**: [LangChain4j](https://github.com/langchain4j/langchain4j)  
@@ -17,7 +18,7 @@ combining **Semantic Search** with **LLMs** to answer questions using a knowledg
   4. Generate answers with context retrieved from the vector DB  
 
 ---
-
+---
 ## 🧩 Architecture
 
 ```mermaid
@@ -27,7 +28,7 @@ flowchart TD
     B -->|Top-K Context| LLM[Ollama LLM (llama3)]
     LLM -->|Generated Answer| OUT[answers.txt + report.csv]
 ````
-
+---
 ---
 
 ## ✨ Features

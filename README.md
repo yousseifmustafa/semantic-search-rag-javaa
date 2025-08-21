@@ -24,7 +24,7 @@ combining **Semantic Search** with **LLMs** to answer questions using a knowledg
 The pipeline works as follows:
 
 ```
-flowchart TD
+* flowchart TD
     A[Knowledge Base (knowledge.txt)] -->|Chunk + Embed| B[(Milvus Vector DB)]
     Q[Questions (questions.txt)] -->|Search Embeddings| B
     B -->|Top-K Context| LLM[Ollama LLM (llama3)]

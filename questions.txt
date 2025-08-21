@@ -1,0 +1,10 @@
+What is the difference between Artificial Intelligence and Machine Learning?
+What are the three main categories of Machine Learning?
+How does Deep Learning differ from traditional Machine Learning?
+What are Large Language Models (LLMs) and give some examples?
+What are the main applications of Natural Language Processing?
+How is Computer Vision used in real-world applications?
+What role does AI play in healthcare?
+What are some ethical concerns associated with AI?
+What is Reinforcement Learning and how does it work?
+Why is responsible AI development important?

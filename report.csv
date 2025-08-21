@@ -1,0 +1,11 @@
+timestamp,question,answer_length,top_k,ctx_chars,retrieval_ms,generation_ms,total_ms,manual_relevance
+"2025-08-19 23:32:45","What is the difference between Artificial Intelligence and Machine Learning?",384,3,3423,327,44562,44889,
+"2025-08-19 23:33:30","What are the three main categories of Machine Learning?",169,3,3423,1817,35671,37488,
+"2025-08-19 23:34:07","How does Deep Learning differ from traditional Machine Learning?",565,3,5862,1836,65946,67782,
+"2025-08-19 23:35:15","What are Large Language Models (LLMs) and give some examples?",206,3,6174,2848,50561,53409,
+"2025-08-19 23:36:09","What are the main applications of Natural Language Processing?",189,3,6747,2009,49585,51594,
+"2025-08-19 23:37:00","How is Computer Vision used in real-world applications?",415,3,2983,2022,39446,41468,
+"2025-08-19 23:37:42","What role does AI play in healthcare?",134,3,1842,1925,22200,24125,
+"2025-08-19 23:38:06","What are some ethical concerns associated with AI?",174,3,1842,1864,25496,27360,
+"2025-08-19 23:38:33","What is Reinforcement Learning and how does it work?",602,3,3423,1714,52380,54094,
+"2025-08-19 23:39:27","Why is responsible AI development important?",428,3,1842,1760,35940,37700,

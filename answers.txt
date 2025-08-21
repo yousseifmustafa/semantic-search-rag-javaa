@@ -1,0 +1,91 @@
+Question:
+What is the difference between Artificial Intelligence and Machine Learning?
+Answer:
+According to the provided information, Machine Learning (ML) is a core subset of Artificial Intelligence (AI). Therefore, the main difference between AI and ML is that AI encompasses a broader range of topics, including learning, reasoning, problem-solving, perception, and natural language understanding, whereas ML specifically focuses on developing algorithms that learn from data.
+Stats: retrieval=327 ms, generation=44562 ms, total=44889 ms, ctx_chars=3423, top_k=3
+-----------------------------------------------------
+Question:
+What are the three main categories of Machine Learning?
+Answer:
+According to the provided information, the three main categories of Machine Learning (ML) are:
+
+1. Supervised learning
+2. Unsupervised learning
+3. Reinforcement learning
+Stats: retrieval=1817 ms, generation=35671 ms, total=37488 ms, ctx_chars=3423, top_k=3
+-----------------------------------------------------
+Question:
+How does Deep Learning differ from traditional Machine Learning?
+Answer:
+According to the provided text, Deep Learning differs from traditional Machine Learning in that:
+
+* In traditional Machine Learning, features are often hand-crafted and need to be engineered by humans.
+* In Deep Learning, features are not hand-crafted and the model discovers useful feature representations from the data automatically.
+
+Additionally, the text notes that the term "deep" in "Deep Learning" refers to the number of layers through which the data is transformed, whereas traditional Machine Learning typically involves a shallower level of abstraction.
+Stats: retrieval=1836 ms, generation=65946 ms, total=67782 ms, ctx_chars=5862, top_k=3
+-----------------------------------------------------
+Question:
+What are Large Language Models (LLMs) and give some examples?
+Answer:
+According to the provided information, Large Language Models (LLMs) are models based on transformer architectures that are capable of generating text. Some examples mentioned include GPT-4, LLaMA, and PaLM.
+Stats: retrieval=2848 ms, generation=50561 ms, total=53409 ms, ctx_chars=6174, top_k=3
+-----------------------------------------------------
+Question:
+What are the main applications of Natural Language Processing?
+Answer:
+According to the provided information, the main applications of Natural Language Processing (NLP) include:
+
+1. Chatbots
+2. Machine translation
+3. Sentiment analysis
+4. Information retrieval
+Stats: retrieval=2009 ms, generation=49585 ms, total=51594 ms, ctx_chars=6747, top_k=3
+-----------------------------------------------------
+Question:
+How is Computer Vision used in real-world applications?
+Answer:
+According to the provided information, Computer Vision allows systems to interpret images and videos. This technology has various real-world applications across industries, including:
+
+* Healthcare: computer vision can be used for diagnostics, personalized treatment, and drug discovery.
+* Transportation: autonomous driving.
+
+These are just a few examples of how computer vision is applied in real-world scenarios.
+Stats: retrieval=2022 ms, generation=39446 ms, total=41468 ms, ctx_chars=2983, top_k=3
+-----------------------------------------------------
+Question:
+What role does AI play in healthcare?
+Answer:
+According to the provided information, AI plays a role in healthcare through:
+
+* Diagnostics
+* Personalized treatment
+* Drug discovery
+Stats: retrieval=1925 ms, generation=22200 ms, total=24125 ms, ctx_chars=1842, top_k=3
+-----------------------------------------------------
+Question:
+What are some ethical concerns associated with AI?
+Answer:
+According to the provided information, some ethical concerns associated with AI include:
+
+1. Bias
+2. Lack of transparency
+3. Job displacement
+4. Data privacy
+5. Ethical risks
+Stats: retrieval=1864 ms, generation=25496 ms, total=27360 ms, ctx_chars=1842, top_k=3
+-----------------------------------------------------
+Question:
+What is Reinforcement Learning and how does it work?
+Answer:
+According to the provided information, Reinforcement Learning is a type of Machine Learning (ML), which develops algorithms that learn from data. Specifically, Reinforcement Learning is a subset of ML that is typically divided into supervised, unsupervised, and reinforcement learning.
+
+There is no further explanation on how it works in the provided text, but based on general knowledge of Reinforcement Learning, it involves an agent interacting with an environment to achieve a goal. The agent learns by receiving rewards or penalties for its actions, which helps it optimize its behavior over time.
+Stats: retrieval=1714 ms, generation=52380 ms, total=54094 ms, ctx_chars=3423, top_k=3
+-----------------------------------------------------
+Question:
+Why is responsible AI development important?
+Answer:
+Responsible AI development is important because it helps to maximize the benefits of Artificial Intelligence (AI) while minimizing its potential harms. The challenges raised by AI, such as bias, lack of transparency, job displacement, data privacy, and ethical risks, highlight the need for responsible AI development to ensure that AI systems are designed and used in a way that is fair, transparent, and beneficial to society.
+Stats: retrieval=1760 ms, generation=35940 ms, total=37700 ms, ctx_chars=1842, top_k=3
+-----------------------------------------------------

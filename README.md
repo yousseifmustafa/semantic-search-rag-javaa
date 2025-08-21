@@ -1,4 +1,3 @@
-````markdown
 # 🔍 Semantic Search RAG in Java
 
 A **Retrieval Augmented Generation (RAG)** system implemented in **Java**,  

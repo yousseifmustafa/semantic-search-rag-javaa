@@ -1,34 +1,32 @@
-````markdown
----
 # 🔍 Semantic Search RAG in Java
 
 A **Retrieval Augmented Generation (RAG)** system implemented in **Java**,  
 combining **Semantic Search** with **LLMs** to answer questions using a knowledge base stored in **Milvus (Zilliz Cloud)**.
----
----
-## ⚡ Overview
-* - **Language**: Java 17+
-* - **Framework**: [LangChain4j](https://github.com/langchain4j/langchain4j)  
-* - **Vector DB**: [Milvus / Zilliz](https://zilliz.com/)  
-* - **LLM Provider**: [Ollama](https://ollama.ai/) (running models like `llama3` locally)  
-* - **Core Pipeline**:  
-  1. Chunk knowledge documents  
-  2. Store embeddings in Milvus  
-  3. Perform semantic search  
-  4. Generate answers with context retrieved from the vector DB  
 
 ---
+
+## ⚡ Overview
+- **Language**: Java 17+  
+- **Framework**: [LangChain4j](https://github.com/langchain4j/langchain4j)  
+- **Vector DB**: [Milvus / Zilliz](https://zilliz.com/)  
+- **LLM Provider**: [Ollama](https://ollama.ai/) (running models like `llama3` locally)  
+
+**Core Pipeline:**
+1. Chunk knowledge documents  
+2. Store embeddings in Milvus  
+3. Perform semantic search  
+4. Generate answers with context retrieved from the vector DB  
+
 ---
+
 ## 🧩 Architecture
 
 ```mermaid
 flowchart TD
-    A[Knowledge Base: knowledge.txt] -->|Chunk + Embedding| B[Milvus Vector DB]
-    Q[Question: questions.txt] -->|Embedding + Search| B
-    B -->|Top-K Context| LLM[Ollama LLM (llama3)]
-    LLM -->|Generated Answer| OUT[answers.txt + report.csv]
-````
----
+    A[📖 Knowledge Base: knowledge.txt] -->|🔹 Chunk + Embed| B[(🗄️ Milvus Vector DB)]
+    Q[❓ Questions: questions.txt] -->|🔍 Search Embeddings| B
+    B -->|📑 Top-K Context| LLM[🤖 Ollama LLM (llama3)]
+    LLM -->|📝 Generated Answer| OUT[answers.txt + report.csv]
 ---
 
 ## ✨ Features

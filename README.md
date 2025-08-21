@@ -21,13 +21,26 @@ combining **Semantic Search** with **LLMs** to answer questions using a knowledg
 
 ## 🧩 Architecture
 
-* The pipeline works as follows:
+The system follows a simple pipeline:
 
-** flowchart TD
-    *** A[Knowledge Base (knowledge.txt)] -->|Chunk + Embed| B[(Milvus Vector DB)]
-    *** Q[Questions (questions.txt)] -->|Search Embeddings| B
-    *** B -->|Top-K Context| LLM[Ollama LLM (llama3)]
-    *** LLM -->|Generated Answer| OUT[answers.txt + report.csv]
+1. 📖 **Knowledge Base**  
+   Load documents from `knowledge.txt`.
+
+2. ✂️ **Chunking & Embedding**  
+   Split text into chunks and create embeddings.
+
+3. 🗄️ **Vector Store (Milvus / Zilliz Cloud)**  
+   Store and manage embeddings for efficient semantic search.
+
+4. 🔍 **Semantic Search**  
+   Retrieve the most relevant chunks (Top-K) for each query in `questions.txt`.
+
+5. 🤖 **LLM (Ollama - llama3)**  
+   Generate answers using the retrieved context.
+
+6. 📝 **Outputs**  
+   - `answers.txt` → generated answers  
+   - `report.csv` → performance stats (retrieval/generation times, context size, etc.)
 
 
 

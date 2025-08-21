@@ -7,11 +7,11 @@ combining **Semantic Search** with **LLMs** to answer questions using a knowledg
 ---
 
 ## ⚡ Overview
-- **Language**: Java 17+
-- **Framework**: [LangChain4j](https://github.com/langchain4j/langchain4j)  
-- **Vector DB**: [Milvus / Zilliz](https://zilliz.com/)  
-- **LLM Provider**: [Ollama](https://ollama.ai/) (running models like `llama3` locally)  
-- **Core Pipeline**:  
+* - **Language**: Java 17+
+* - **Framework**: [LangChain4j](https://github.com/langchain4j/langchain4j)  
+* - **Vector DB**: [Milvus / Zilliz](https://zilliz.com/)  
+* - **LLM Provider**: [Ollama](https://ollama.ai/) (running models like `llama3` locally)  
+* - **Core Pipeline**:  
   1. Chunk knowledge documents  
   2. Store embeddings in Milvus  
   3. Perform semantic search  

@@ -1,4 +1,4 @@
-# 🔍 Semantic Search RAG in Java
+# 🔍 Retrieval-Augmented Generation (RAG) with Java, LangChain4j & Milvus
 
 ![Java](https://img.shields.io/badge/Java-17+-red?logo=oracle)
 ![LangChain4j](https://img.shields.io/badge/LangChain4j-Framework-blue?logo=java)

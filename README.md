@@ -1,5 +1,16 @@
 # 🔍 Semantic Search RAG in Java
 
+![Java](https://img.shields.io/badge/Java-17+-red?logo=oracle)
+![LangChain4j](https://img.shields.io/badge/LangChain4j-Framework-blue?logo=java)
+![Milvus](https://img.shields.io/badge/Milvus-Vector%20DB-green?logo=milvus)
+![Zilliz](https://img.shields.io/badge/Zilliz-Cloud%20Vector%20DB-lightblue?logo=zilliz)
+![Ollama](https://img.shields.io/badge/Ollama-LLM%20Provider-orange?logo=ollama)
+![Llama3](https://img.shields.io/badge/Model-llama3-success?logo=meta)
+![Maven](https://img.shields.io/badge/Build-Maven-darkblue?logo=apachemaven)
+![Status](https://img.shields.io/badge/Project-Active-brightgreen)
+
+
+
 A **Retrieval Augmented Generation (RAG)** system implemented in **Java**,  
 combining **Semantic Search** with **LLMs** to answer questions using a knowledge base stored in **Milvus (Zilliz Cloud)**.
 
